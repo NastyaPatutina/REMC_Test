@@ -1,0 +1,9 @@
+AllCops:
+  Excludes:
+    - db/**/*
+    - config/**/*
+    - bin/**/*
+    - test/test_helper.rb
+    - Gemfile
+    - Rakefile
+    - config.ru
