@@ -1,2 +1,2 @@
-class Price
+class Price < ApplicationRecord
 end
