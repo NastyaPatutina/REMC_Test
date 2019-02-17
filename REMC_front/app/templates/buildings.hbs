@@ -1,0 +1,17 @@
+<h1>Building list</h1>
+{{#each model as |building_item|}}
+  <div>
+    <span>Building class:</span> {{building_item.building_class}}
+  </div>
+  <div>
+    <span>Street:</span> {{building_item.street}}
+  </div>
+  <div>
+    <span>House number:</span> {{building_item.house_number}}
+  </div>
+  <div>
+    <span>Floors:</span> {{building_item.floors}}
+  </div>
+  <hr>
+{{/each}}
+{{outlet}}
