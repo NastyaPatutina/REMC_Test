@@ -18,12 +18,12 @@ ActiveRecord::Schema.define(version: 2019_02_16_211404) do
   create_table "blocks", force: :cascade do |t|
     t.integer "area", default: 0, null: false
     t.integer "floor", default: 0, null: false
-    t.bigint "buildings_id"
-    t.index ["buildings_id"], name: "index_blocks_on_buildings_id"
+    t.bigint "building_id"
+    t.index ["building_id"], name: "index_blocks_on_building_id"
   end
 
   create_table "buildings", force: :cascade do |t|
-    t.string "class", null: false
+    t.string "building_class", null: false
     t.string "street", null: false
     t.string "house_number", null: false
     t.integer "floors", default: 0, null: false
@@ -31,15 +31,15 @@ ActiveRecord::Schema.define(version: 2019_02_16_211404) do
 
   create_table "offers", force: :cascade do |t|
     t.string "offer_type", default: "sale", null: false
-    t.bigint "blocks_id"
-    t.index ["blocks_id"], name: "index_offers_on_blocks_id"
+    t.bigint "block_id"
+    t.index ["block_id"], name: "index_offers_on_block_id"
   end
 
   create_table "prices", force: :cascade do |t|
     t.bigint "value", default: 0, null: false
     t.integer "currency", default: 0, null: false
-    t.bigint "offers_id"
-    t.index ["offers_id"], name: "index_prices_on_offers_id"
+    t.bigint "offer_id"
+    t.index ["offer_id"], name: "index_prices_on_offer_id"
   end
 
 end
