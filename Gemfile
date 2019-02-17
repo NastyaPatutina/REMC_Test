@@ -4,10 +4,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# Full-stack web application framework. (https://rubyonrails.org)
 gem 'rails', '~> 5.2.2'
 # Use postgresql as the database for Active Record
+# Pg is the Ruby interface to the {PostgreSQL RDBMS}[http://www.postgresql.org/] (https://bitbucket.org/ged/ruby-pg)
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
+# Puma is a simple, fast, threaded, and highly concurrent HTTP 1.1 server for Ruby/Rack applications (http://puma.io)
 gem 'puma', '~> 3.11'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
@@ -23,8 +26,10 @@ gem 'puma', '~> 3.11'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
+# Boot large ruby/rails apps faster (https://github.com/Shopify/bootsnap)
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# Automatic Ruby code style checking tool. (https://github.com/rubocop-hq/rubocop)
 gem 'rubocop', require: false
 
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
@@ -32,16 +37,24 @@ gem 'rubocop', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # Ruby fast debugger - base + CLI (https://github.com/deivid-rodriguez/byebug)
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  # Annotates Rails Models, routes, fixtures, and others based on the database schema. (http://github.com/ctran/annotate_models)
+  gem 'annotate'
 end
 
 group :development do
+  # Listen to file modifications (https://github.com/guard/listen)
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # Rails application preloader (https://github.com/rails/spring)
   gem 'spring'
+  # Makes spring watch files using the listen gem. (https://github.com/jonleighton/spring-watcher-listen)
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+# Timezone Data for TZInfo (http://tzinfo.github.io)
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
