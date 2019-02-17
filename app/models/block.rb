@@ -11,4 +11,5 @@
 class Block < ApplicationRecord
   belongs_to :building
   has_many :offers
+  has_many :prices, through: :offers
 end
