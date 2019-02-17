@@ -10,5 +10,7 @@
 #
 
 class Building < ApplicationRecord
+ include Filterable
+
  has_many :blocks
 end

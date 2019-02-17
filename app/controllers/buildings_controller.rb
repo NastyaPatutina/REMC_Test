@@ -3,7 +3,7 @@ class BuildingsController < ApplicationController
 
   # GET /buildings
   def index
-    @buildings = Building.all
+    @buildings = Building.filter(params)
     render json: @buildings
   end
 
