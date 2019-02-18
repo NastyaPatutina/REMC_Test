@@ -3,6 +3,12 @@
 <div class="col-lg-11">
   <div class="container">
     <h1>Building list</h1>
+    <div>
+      {{#link-to "buildings.new"}}Create new{{/link-to}}
+      <br>
+    </div>
+    {{outlet}}
+    <br>
     <table class="table">
       <thead>
         <tr>
@@ -37,4 +43,3 @@
     </table>
   </div>
 </div>
-{{outlet}}

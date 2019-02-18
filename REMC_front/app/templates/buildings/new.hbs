@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="col-lg-1"></div>
+  <form id="new_building_form">
+    <div class="form-group">
+      <div class="col-lg-6">
+        {{input value=model.building_class placeholder="Building class" class="form-control"}}
+        <br>
+        {{input value=model.street placeholder="Street" class="form-control"}}
+        <br>
+        {{input value=model.house_number placeholder="House number" class="form-control"}}
+        <br>
+        {{input value=model.floors placeholder="Floors" class="form-control"}}
+        <br>
+        <div class="container">
+          <div class="row">
+            <button {{action "save"}} class="btn btn-sm btn-primary">Save</button>
+            <div class="col-lg-1"></div>
+            <button {{action "cancel"}} class="btn btn-sm btn-primary">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+{{outlet}}
