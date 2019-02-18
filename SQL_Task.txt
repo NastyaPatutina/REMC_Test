@@ -1,5 +1,5 @@
 ORM:
-Block.where(area: [150..300]).where(floor: [1, 8, 10]).joins(:building).where(buildings: {building_class: 'A', street:'Street #3'}).joins(:prices).where(prices: {value: [0..5000], currency: 2})
+Block.where(area: [150..300]).where(floor: [1, 8, 10]).joins(:building).where(buildings: {building_class: 'A', street:'Пресненская набережная'}).joins(:prices).where(prices: {value: [0..5000], currency: 2})
 
 SQL:
 SELECT  blocks.* FROM blocks INNER JOIN buildings ON blocks.building_id = buildings.id
@@ -8,6 +8,6 @@ SELECT  blocks.* FROM blocks INNER JOIN buildings ON blocks.building_id = buildi
                               WHERE blocks.area BETWEEN 150 AND 300
                                     AND blocks.floor IN (1, 8, 10)
                                     AND buildings.building_class = 'A'
-                                    AND buildings.street = 'Street #3'
+                                    AND buildings.street = 'Пресненская набережная'
                                     AND prices.value <= 5000
                                     AND prices.currency = 2;
