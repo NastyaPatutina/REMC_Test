@@ -28,3 +28,27 @@ tmp/
 log/
 
 \.idea/
+
+# compiled output
+/REMC_front/dist/
+/REMC_front/tmp/
+
+# dependencies
+/REMC_front/bower_components/
+/REMC_front/node_modules/
+
+# misc
+/REMC_front/.env*
+/REMC_front/.sass-cache
+/REMC_front/connect.lock
+/REMC_front/coverage/
+/REMC_front/libpeerconnection.log
+/REMC_front/npm-debug.log*
+/REMC_front/testem.log
+/REMC_front/yarn-error.log
+
+# ember-try
+/REMC_front/.node_modules.ember-try/
+/REMC_front/bower.json.ember-try
+/REMC_front/package.json.ember-try
+

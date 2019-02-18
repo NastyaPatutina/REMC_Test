@@ -1,0 +1,51 @@
+
+<div class="col-lg-1"></div>
+<div class="col-lg-11">
+  <div class="container">
+    <h1>Building list</h1>
+    <div>
+      {{#link-to "buildings.new"}}Create new{{/link-to}}
+      <br>
+    </div>
+    {{outlet}}
+    <br>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Building class</th>
+          <th scope="col">Street</th>
+          <th scope="col">House number</th>
+          <th scope="col">Floors</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model as |building_item|}}
+          <tr>
+            <th>
+              {{building_item.id}}
+            </th>
+            <td>
+              {{building_item.building_class}}
+            </td>
+            <td>
+              {{building_item.street}}
+            </td>
+            <td>
+              {{building_item.house_number}}
+            </td>
+            <td>
+              {{building_item.floors}}
+            </td>
+            <td>
+              <button {{action "delete" building_item}} class="btn btn-danger">
+                {{fa-icon "trash"}}
+              </button>
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
