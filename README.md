@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+REMC test task
 
-Things you may want to cover:
+* Ruby 2.6.1
 
-* Ruby version
+* Rails 5.2.2
 
-* System dependencies
+* PostgreSQL 10
 
-* Configuration
+* Database setup : rails db:setup
 
-* Database creation
+* Fronted run
+    * cd REMC_front
+    * npm install
+    * ember s
 
-* Database initialization
+* Backend run
+    * bundle install
+    * rails s
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* SQL task: SQL_Task.txt
