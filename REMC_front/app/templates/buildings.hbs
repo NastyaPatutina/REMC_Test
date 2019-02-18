@@ -1,17 +1,40 @@
-<h1>Building list</h1>
-{{#each model as |building_item|}}
-  <div>
-    <span>Building class:</span> {{building_item.building_class}}
+
+<div class="col-lg-1"></div>
+<div class="col-lg-11">
+  <div class="container">
+    <h1>Building list</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Building class</th>
+          <th scope="col">Street</th>
+          <th scope="col">House number</th>
+          <th scope="col">Floors</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each model as |building_item|}}
+          <tr>
+            <th>
+              {{building_item.id}}
+            </th>
+            <td>
+              {{building_item.building_class}}
+            </td>
+            <td>
+              {{building_item.street}}
+            </td>
+            <td>
+              {{building_item.house_number}}
+            </td>
+            <td>
+              {{building_item.floors}}
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
   </div>
-  <div>
-    <span>Street:</span> {{building_item.street}}
-  </div>
-  <div>
-    <span>House number:</span> {{building_item.house_number}}
-  </div>
-  <div>
-    <span>Floors:</span> {{building_item.floors}}
-  </div>
-  <hr>
-{{/each}}
+</div>
 {{outlet}}
