@@ -7,7 +7,6 @@ export default Route.extend({
 
   actions: {
     save() {
-      console.log(this.currentModel);
       const newPost = this.store.createRecord('building', this.currentModel);
       newPost.save().then(() => {
         this.transitionTo('buildings');

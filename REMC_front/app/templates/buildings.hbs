@@ -17,6 +17,7 @@
           <th scope="col">Street</th>
           <th scope="col">House number</th>
           <th scope="col">Floors</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -36,6 +37,11 @@
             </td>
             <td>
               {{building_item.floors}}
+            </td>
+            <td>
+              <button {{action "delete" building_item}} class="btn btn-danger">
+                {{fa-icon "trash"}}
+              </button>
             </td>
           </tr>
         {{/each}}
